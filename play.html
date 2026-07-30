@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试测试</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #1a1a2e;
+            color: #fff;
+            font-family: -apple-system, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .player {
+            text-align: center;
+            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+        }
+        .player h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+        audio {
+            width: 100%;
+            margin-top: 15px;
+        }
+        .tip {
+            font-size: 13px;
+            color: #888;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="player">
+        <h2>🔊测试测试</h2>
+        <audio controls autoplay preload="auto">
+            <source src="https://cdn.jsdelivr.net/gh/LiAo12318/gift@main/text.mp3" type="audio/mpeg">
+        </audio>
+        <p class="tip">点击播放按钮即可收听</p>
+    </div>
+</body>
+</html>
