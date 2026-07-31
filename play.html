@@ -3,47 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>测试测试</title>
+    <title>七里香 - 音乐播放器</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background: #1a1a2e;
-            color: #fff;
-            font-family: -apple-system, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
         }
+
         .player {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+                        inset 0 0 30px rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             text-align: center;
-            padding: 30px;
-            width: 90%;
             max-width: 400px;
+            width: 90%;
         }
-        .player h2 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: #e0e0e0;
+
+        h2 {
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
         }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            margin-bottom: 30px;
+            letter-spacing: 4px;
+        }
+
+        .tip {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 13px;
+            margin-top: 20px;
+            animation: fadeInOut 2s ease-in-out infinite;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
+        }
+
+        /* 自定义音频播放器样式 */
         audio {
             width: 100%;
-            margin-top: 15px;
+            margin-top: 20px;
+            outline: none;
+            border-radius: 20px;
         }
-        .tip {
-            font-size: 13px;
-            color: #888;
-            margin-top: 15px;
+
+        audio::-webkit-media-controls-panel {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+        }
+
+        audio::-webkit-media-controls-play-button {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        audio::-webkit-media-controls-play-button:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        .now-playing {
+            margin-top: 25px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .now-playing span {
+            color: #ffd700;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
     <div class="player">
-        <h2>🔊测试测试</h2>
-        <audio controls autoplay preload="auto">
+        <h2>🎵 七里香</h2>
+        <p class="subtitle">—— 周杰伦</p>
+        
+        <audio controls autoplay loop>
+            <!-- 确保音频文件已上传到仓库根目录，命名严格为 text.mp3 -->
+            <!-- 如果音频文件在其他位置，请修改下方 src 路径 -->
             <source src="https://cdn.jsdelivr.net/gh/LiAo12318/gift@main/text.mp3" type="audio/mpeg">
+            您的浏览器不支持 HTML5 音频播放。
         </audio>
-        <p class="tip">点击播放按钮即可收听</p>
+
+        <p class="tip">💡 点击播放按钮即可收听</p>
+        <p class="now-playing">🎧 正在播放：<span>七里香</span> · 周杰伦</p>
     </div>
 </body>
 </html>
