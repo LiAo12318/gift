@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8d5d3">
+  <title>写给江仰彤的信</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; overflow-x: hidden; background: #f7e8e1; color: #542f3e; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .phone { position: relative; width: 100%; min-height: 100svh; overflow: hidden; background: linear-gradient(160deg, #fce9de 0%, #f8d5d3 46%, #eabac7 100%); }
+    .glow { position: absolute; border-radius: 50%; filter: blur(2px); opacity: .72; pointer-events: none; }
+    .glow.one { width: 260px; height: 260px; top: -88px; right: -110px; background: #ffe6a8; }
+    .glow.two { width: 190px; height: 190px; bottom: 95px; left: -100px; background: #d993af; }
+    .stars { position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(circle at 20% 17%,#fff9e7 0 2px,transparent 3px), radial-gradient(circle at 78% 27%,#fff9e7 0 1.5px,transparent 2.5px), radial-gradient(circle at 12% 58%,#fff9e7 0 1px,transparent 2px), radial-gradient(circle at 89% 62%,#fff9e7 0 1.5px,transparent 2.5px); }
+    main { position: relative; z-index: 2; display: flex; flex-direction: column; width: min(100%, 430px); min-height: 100svh; margin: 0 auto; padding: max(30px, env(safe-area-inset-top)) 27px max(22px, env(safe-area-inset-bottom)); }
+    .top { color: #8f5364; font-size: 13px; letter-spacing: .1em; text-align: center; }
+    .gift { position: relative; width: 180px; height: 151px; margin: 32px auto 23px; }
+    .lid { position: absolute; z-index: 2; left: 0; top: 29px; width: 180px; height: 42px; border-radius: 13px; background: #c56b81; box-shadow: inset 0 -7px rgba(129,54,73,.12); }
+    .box { position: absolute; bottom: 0; left: 10px; width: 160px; height: 98px; border-radius: 0 0 18px 18px; background: #d97c91; box-shadow: 0 12px 24px rgba(142,70,86,.2), inset 0 -10px rgba(151,61,83,.12); }
+    .ribbon-v { position: absolute; z-index: 3; top: 30px; left: 78px; width: 24px; height: 121px; background: #f9e3bc; }
+    .ribbon-h { position: absolute; z-index: 3; top: 40px; left: 0; width: 180px; height: 15px; background: #f9e3bc; }
+    .bow { position: absolute; z-index: 4; top: 0; left: 59px; width: 63px; height: 45px; }
+    .bow::before, .bow::after { content: ""; position: absolute; top: 6px; width: 34px; height: 25px; border: 9px solid #f9e3bc; border-radius: 50% 50% 45% 45%; }
+    .bow::before { left: 0; transform: rotate(25deg); }.bow::after { right: 0; transform: rotate(-25deg); }
+    .knot { position: absolute; z-index: 5; top: 15px; left: 81px; width: 20px; height: 20px; border-radius: 50%; background: #f9e3bc; }
+    .eyebrow, .artist, .footer { text-align: center; }.eyebrow { color: #a45b70; font-size: 12px; letter-spacing: .22em; }.song-title { margin: 9px 0 5px; color: #603746; font-family: Georgia, "Songti SC", serif; font-size: 34px; font-weight: 500; letter-spacing: .08em; text-align: center; }.artist { color: #9c6876; font-size: 14px; }
+    .letter { margin-top: 25px; padding: 18px 20px 15px; border: 1px solid rgba(255,255,255,.64); border-radius: 20px; background: rgba(255,250,245,.45); box-shadow: 0 10px 22px rgba(145,82,99,.09); }.letter p { margin: 0; color: #754858; font-family: Georgia, "Songti SC", serif; font-size: 15px; line-height: 1.75; text-align: center; }.from { margin-top: 7px; color: #a46172; font-size: 12px; text-align: right; }
+    .player { margin-top: auto; padding: 17px 18px; border-radius: 22px; background: rgba(255,249,245,.74); box-shadow: 0 12px 30px rgba(116,57,77,.15); }.player-head { display: flex; align-items: center; gap: 12px; }.cover { position: relative; width: 48px; height: 48px; overflow: hidden; border-radius: 13px; background: linear-gradient(145deg,#b95672,#efb1a9); }.cover::before { content: "♪"; position: absolute; top: 5px; right: 9px; color: #ffe5c0; font-size: 29px; }.track { flex: 1; }.track strong { display: block; color: #613846; font-size: 14px; font-weight: 500; }.track span { color: #a06c79; font-size: 11px; }.play { width: 42px; height: 42px; border: 0; border-radius: 50%; background: #b95570; color: #fff9f5; cursor: pointer; font-size: 15px; box-shadow: 0 5px 12px rgba(160,60,88,.25); }.seek { width: 100%; margin: 16px 0 5px; accent-color: #b95570; cursor: pointer; }.time { display: flex; justify-content: space-between; color: #ad7882; font-size: 10px; }.footer { padding-top: 15px; color: #9a5d6e; font-size: 11px; letter-spacing: .08em; }
+  </style>
+</head>
+<body>
+  <section class="phone" aria-label="歌曲礼物页面">
+    <div class="glow one"></div><div class="glow two"></div><div class="stars"></div>
+    <main>
+      <header class="top">一首给宝宝唱的歌</header>
+      <div class="gift" aria-label="礼物盒"><div class="bow"></div><div class="knot"></div><div class="lid"></div><div class="ribbon-h"></div><div class="box"></div><div class="ribbon-v"></div></div>
+      <div class="eyebrow">送给此刻的你</div><h1 class="song-title">给宝宝唱的歌</h1><div class="artist">Lune · 温柔收藏</div>
+      <section class="letter"><p>愿这首歌替我轻轻落在你耳边，<br>把今天没说出口的心事，唱成晚风。</p><div class="from">— 来自一位想念你的人</div></section>
+      <section class="player" aria-label="歌曲播放器"><audio id="audio" preload="metadata" src="https://raw.githubusercontent.com/LiAo12318/gift/afddc3f37039232cc3128dc265bbecde2699a741/test2.mp3"></audio><div class="player-head"><div class="cover" aria-hidden="true"></div><div class="track"><strong>给江仰彤专属的歌</strong><span id="player-state">加载歌曲中…</span></div><button class="play" type="button" aria-label="播放歌曲" aria-pressed="false">▶</button></div><input class="seek" type="range" value="0" min="0" max="100" aria-label="歌曲播放进度"><div class="time"><span id="current-time">00:00</span><span id="total-time">--:--</span></div></section>
+      <footer class="footer">愿你被温柔的旋律拥抱</footer>
+    </main>
+  </section>
+  <script>
+    const audio = document.querySelector('#audio');
+    const play = document.querySelector('.play');
+    const seek = document.querySelector('.seek');
+    const currentTime = document.querySelector('#current-time');
+    const totalTime = document.querySelector('#total-time');
+    const playerState = document.querySelector('#player-state');
+    const formatTime = seconds => `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(seconds % 60).padStart(2, '0')}`;
+    const updatePlayer = () => { seek.value = audio.currentTime; currentTime.textContent = formatTime(audio.currentTime); };
+    audio.addEventListener('loadedmetadata', () => { seek.max = Math.floor(audio.duration); totalTime.textContent = formatTime(audio.duration); playerState.textContent = `${formatTime(audio.duration)} · 抒情 / 治愈`; });
+    audio.addEventListener('timeupdate', updatePlayer);
+    audio.addEventListener('ended', () => { play.setAttribute('aria-pressed', 'false'); play.textContent = '▶'; playerState.textContent = `${formatTime(audio.duration)} · 抒情 / 治愈`; });
+    audio.addEventListener('error', () => { playerState.textContent = '歌曲加载失败，请检查网络'; });
+    play.addEventListener('click', async () => { if (audio.paused) { try { await audio.play(); play.setAttribute('aria-pressed', 'true'); play.textContent = 'Ⅱ'; playerState.textContent = '正在播放 · 抒情 / 治愈'; } catch { playerState.textContent = '无法播放该歌曲'; } } else { audio.pause(); play.setAttribute('aria-pressed', 'false'); play.textContent = '▶'; playerState.textContent = `${formatTime(audio.duration)} · 抒情 / 治愈`; } });
+    seek.addEventListener('input', () => { audio.currentTime = seek.value; updatePlayer(); });
+  </script>
+</body>
+</html>
